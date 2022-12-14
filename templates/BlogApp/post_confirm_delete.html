@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+{% extends 'BlogApp/base.html' %}
+{% block title %}{{ post.title }}{% endblock %}
+{% block content %}
+    <h1>Delete {{ post.name }}post</h1>
+    <h2>Are you want to delete the Post</h2>
+    <form method="post" >
+    {% csrf_token %}
+    Yes :<button type="submit">Delete-post</button><br><br>
+    No :<a href="/post_detail/{{ post.id }}"><button type="button">Cancel</button> </a>
+    </form>
+{% endblock %}

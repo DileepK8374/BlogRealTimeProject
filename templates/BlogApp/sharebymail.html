@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+{%extends 'BlogApp/base.html'%}
+{%block title %}Share Post By Email{%endblock%}
+{%block content%}
+    {%if sent%}
+        <h1>Email Successfully Sent !!!</h1>
+        <p>"{{post.title}}" was sent by email</p>
+        <a  class="btn btn-lg btn-success" href="/post_list/">Back </a>
+    {%else%}
+        <h1>Share {{post.title}}" by Email!!!"</h1>
+        <form method="post">
+            {{form.as_p}}
+            {%csrf_token%}
+            <input type="submit" name="" class="btn btn-lg btn-success" value="Submit"> <a  class="btn btn-lg btn-success" href="/post_list/">Back </a>
+        </form>
+    {%endif %}
+    <!--style="color:darkblue;text-decoration: underline;-->
+
+{%endblock%}
+

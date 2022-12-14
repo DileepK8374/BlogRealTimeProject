@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+{% extends 'BlogApp/base.html' %}
+{% block title %}{{ post.title }}{% endblock %}
+{%block content %}
+        <h1 align="center">Update Your Post</h1>
+    <hr/>
+        <form method="post"  >
+            {{form.as_p}}
+            {%csrf_token%}
+             <input type="submit" value="Update" class="btn btn-lg btn-success"> <a href="/post_list" class="btn btn-lg btn-success" >Back</a>
+        </form>
+
+{% endblock %}

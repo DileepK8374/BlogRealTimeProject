@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+
+{% extends 'BlogApp/base.html' %}
+{% block content %}
+    <h1> Are You Want Update The Post</h1><br/><br/>
+    <form method="post">
+        {{ form.as_p }}
+        {% csrf_token %}
+    </form>
+    <input type="button" value="Update" />
+{% endblock %}

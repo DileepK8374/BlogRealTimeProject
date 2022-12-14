@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+{% extends 'BlogApp/base.html' %}
+{% block content %}
+
+    <input type="checkbox" id="check"/>
+    <label for="check">
+        <i class="fas fa-bars" id="home"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebarnav">
+         <header>Home Menu</header>
+         <ul>
+             <li><a href="#"><i class="fas fa-qrcod"></i>Dashboard </a> </li>
+                         <li><a href="#"><i class="fas fa-link"></i>Link </a> </li>
+                         <li><a href="#"><i class="fas fa-stream"></i>Overview </a> </li>
+                         <li><a href="#"><i class="fas fa-calender-week"></i>Calender </a> </li>
+                         <li><a href="#"><i class="fas fa-envelope"></i>Contackt </a> </li>
+                         <li><a href="#"><i class="fas fa-sliders-h"></i>Services </a> </li>
+                         <li><a href="/logout/"><i class="fas fa-question-circle"></i>Logout </a> </li>
+         </ul>
+    </div>
+{% endblock %}
