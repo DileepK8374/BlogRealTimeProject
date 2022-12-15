@@ -4,7 +4,7 @@
 
 {%block content%}
 
-    <h1>{{ user.username }}</h1>
+    <h1>{{ post.tittle }}</h1>
     <hr />
 
     <p id='date'>Published on {{post.publish}} by {{post.author|title}}</p>
@@ -44,5 +44,5 @@
         </form>
  	{%endif%}
     <br/>
-
+        <a href="/post_list/" type="submit" class="btn btn-lg btn-success">Back</a>
 {%endblock%}
