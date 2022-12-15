@@ -31,12 +31,12 @@ urlpatterns = [
     path('logout/',views.Logout_view),
 
     path('<tag_slug>/comment/', views.post_list_view, name='post_list_by_tag_name'),
-    path('/<year>/<month>/<day>/<post>', views.post_detail_view,name='post_detail'),
+    path('<year>/<month>/<day>/<post>', views.post_detail_view,name='post_detail'),
     path('succ/',views.Success,name='succ'),
     #path('login/',views.Blog_view),
     path('thanks/',views.Thanks,name='thanks'),
     path("<id>/share/", views.mail_send_view),
-    path('^mail/', views.mail_send_view),
+    path('mail/', views.mail_send_view),
     # use-in-last
     #path('post_list/', views.post_list_view),
     #re_path('^.*$', views.Homepage),
